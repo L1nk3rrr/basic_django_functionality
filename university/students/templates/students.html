@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Students</title>
+</head>
+<body>
+    <h1>Generated Students</h1>
+    <ul>
+        {% for student in students %}
+        <li>
+            <strong>ID:</strong> {{ student.id }} -
+            <strong>First Name:</strong> {{ student.first_name }} -
+            <strong>Last Name:</strong> {{ student.last_name }} -
+            <strong>Age:</strong> {{ student.age }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'generate_students' %}?count=10">Generate 10 Students</a>
+</body>
+</html>
