@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Student</title>
+</head>
+<body>
+    <h1>Generated Student</h1>
+    <ul>
+        <li><strong>ID:</strong> {{ student.id }}</li>
+        <li><strong>First Name:</strong> {{ student.first_name }}</li>
+        <li><strong>Last Name:</strong> {{ student.last_name }}</li>
+        <li><strong>Age:</strong> {{ student.age }}</li>
+    </ul>
+    <a href="{% url 'generate_student' %}">Generate Another Student</a>
+</body>
+</html>
