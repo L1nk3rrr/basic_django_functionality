@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Groups</title>
+</head>
+<body>
+    <h1>Groups</h1>
+    <ul>
+        {% for group in groups %}
+        <li>
+            ID: {{ group.id }}<br>
+            Name: {{ group.name }}<br>
+            <strong>Students:</strong>
+            <ul>
+                {% for student in group.students.all %}
+                <li>
+                    {{ student.first_name }} {{ student.last_name }} (Age: {{ student.age }})
+                </li>
+                {% endfor %}
+            </ul>
+            <strong>Teachers:</strong>
+            <ul>
+                {% for teacher in group.teachers.all %}
+                <li>
+                    {{ teacher.first_name }} {{ teacher.last_name }} (Age: {{ teacher.age }})
+                </li>
+                {% endfor %}
+            </ul>
+
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

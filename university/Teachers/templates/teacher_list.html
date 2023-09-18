@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teachers</title>
+</head>
+<body>
+    <h1>Teachers</h1>
+    <ul>
+        {% for teacher in teachers %}
+        <li>
+            ID: {{ teacher.id }}<br>
+            First Name: {{ teacher.first_name }}<br>
+            Last Name: {{ teacher.last_name }}<br>
+            Age: {{ teacher.age }}<br>
+            Group: {{ teacher.group}}<br>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
